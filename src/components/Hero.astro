@@ -1,24 +1,13 @@
 ---
-const videoProps = {
-    autoplay: true,
-    loop: true,
-    muted: true,
-    id: "some-id"
-};
 
-const sourceProps = {
-    src: "public/vecteezy_military-combat-aircraft_7071482_127.mp4",
-    type: "video/mp4"
-};
 ---
 
 <body class="bg-gray-100">
   <!-- Video Container -->
   
-  <video  {...videoProps}>
+  <!-- <video  {...videoProps}>
      <source {...sourceProps}>
-    <!-- Include additional source elements for different video formats if needed -->
-  </video>
+  </video> -->
   <!-- {{# <div id="stars" class="absolute top-0 left-0 w-full h-full"></div>
   <div id="stars2" class="absolute top-0 left-0 w-full h-full"></div>
   <div id="stars3" class="absolute top-0 left-0 w-full h-full"></div> #}} -->
@@ -52,43 +41,18 @@ const sourceProps = {
   </div>
 </body>
 </html>
-<!-- {{# <style>
-  html {
-    height: 100%;
-    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-    overflow: hidden;
+<style>
+	.hero {
+			background-color: transparent;
+			/* Set the background to transparent */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			overflow: hidden;
+			position: relative;
+	}
+  .pirata-font {
+    font-family: "Pirata One", sans-serif;
   }
-  
-  #stars, #stars2, #stars3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #stars {
-    animation: animStar 50s linear infinite;
-    /* box-shadow values from compiled SCSS */
-  }
-  
-  #stars2 {
-    animation: animStar 100s linear infinite;
-    /* box-shadow values from compiled SCSS */
-  }
-  
-  #stars3 {
-    animation: animStar 150s linear infinite;
-    /* box-shadow values from compiled SCSS */
-  }
-  
-  @keyframes animStar {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(-2000px);
-    }
-  }
-  
-</style> #}} -->
+</style> 

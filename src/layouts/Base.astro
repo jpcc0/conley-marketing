@@ -1,247 +1,167 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+const videoProps = {
+  autoplay: true,
+  loop: true,
+  muted: true,
+  id: "some-id",
+};
+
+const sourceProps = {
+  src: "public/vecteezy_military-combat-aircraft_7071482_127.mp4",
+  type: "video/mp4",
+};
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/Screenshot 2023-10-19 at 3.03.55 PM.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta charset="utf-8" />
-    <link rel="shortcut icon" type="image/x-icon" href="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/Screenshot 2023-10-19 at 3.03.55 PM.png"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" title="Joshua Conley Portfolio" />
     <!-- {{ vite src="resources/js/site.js|resources/css/site.css" }}
     {{# <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> #}} -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <title>Joshua P. Conley</title>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <video {...videoProps}>
+      <source {...sourceProps} />
+      <!-- Include additional source elements for different video formats if needed -->
+    </video>
+    <slot />
+  </body>
 </html>
-<script>
-	// $(document).ready(function(){
-	// 		$('.slick-slider').slick({
-	// 				dots: true,
-	// 				infinite: true,
-	// 				speed: 300,
-	// 				slidesToShow: 1,
-	// 				adaptiveHeight: true
-	// 		});
-	// });
-	
-	// // Configuration for tsparticles
-	// particlesJS("particles-js", {
-	// 		particles: {
-	// 				number: {
-	// 						value: 80, // Adjust the number of particles
-	// 						density: {
-	// 								enable: true,
-	// 								value_area: 800,
-	// 						},
-	// 				},
-	// 				color: {
-	// 						value: "#000000", // Change the particle color
-	// 				},
-	// 				shape: {
-	// 						type: "circle", // Change the particle shape
-	// 						stroke: {
-	// 								width: 0,
-	// 								color: "#000000",
-	// 						},
-	// 						polygon: {
-	// 								nb_sides: 5,
-	// 						},
-	// 				},
-	// 				opacity: {
-	// 						value: 0.5, // Adjust the opacity
-	// 						random: false,
-	// 						anim: {
-	// 								enable: false,
-	// 								speed: 1,
-	// 								opacity_min: 0.1,
-	// 								sync: false,
-	// 						},
-	// 				},
-	// 				size: {
-	// 						value: 3, // Adjust the particle size
-	// 						random: true,
-	// 						anim: {
-	// 								enable: false,
-	// 								speed: 40,
-	// 								size_min: 0.1,
-	// 								sync: false,
-	// 						},
-	// 				},
-	// 				line_linked: {
-	// 						enable: true,
-	// 						distance: 150,
-	// 						color: "#000000", // Change the line color
-	// 						opacity: 0.4, // Adjust the line opacity
-	// 						width: 1,
-	// 				},
-	// 				move: {
-	// 						enable: true,
-	// 						speed: 6, // Adjust the particle movement speed
-	// 						direction: "none",
-	// 						random: false,
-	// 						straight: false,
-	// 						out_mode: "out",
-	// 						bounce: false,
-	// 						attract: {
-	// 								enable: false,
-	// 								rotateX: 600,
-	// 								rotateY: 1200,
-	// 						},
-	// 				},
-	// 		},
-	// 		interactivity: {
-	// 				detect_on: "canvas",
-	// 				events: {
-	// 						onhover: {
-	// 								enable: true,
-	// 								mode: "repulse",
-	// 						},
-	// 						onclick: {
-	// 								enable: true,
-	// 								mode: "push",
-	// 						},
-	// 						resize: true,
-	// 				},
-	// 				modes: {
-	// 						grab: {
-	// 								distance: 140,
-	// 								line_linked: {
-	// 										opacity: 1,
-	// 								},
-	// 						},
-	// 						bubble: {
-	// 								distance: 400,
-	// 								size: 40,
-	// 								duration: 2,
-	// 								opacity: 8,
-	// 								speed: 3,
-	// 						},
-	// 						repulse: {
-	// 								distance: 200,
-	// 								duration: 0.4,
-	// 						},
-	// 						push: {
-	// 								particles_nb: 4,
-	// 						},
-	// 						remove: {
-	// 								particles_nb: 2,
-	// 						},
-	// 				},
-	// 		},
-	// 		retina_detect: true,
-	// });
-
-
-// document.addEventListener('DOMContentLoaded', function(){
-// 	new Glide('.glide', {
-// 			type: 'carousel',
-// 			perView: 1,
-// 			focusAt: 'center',
-// 			gap: 0,
-// 			autoplay: 3000
-// 	}).mount();
-// });
-
-</script>
+<script></script>
 <style>
-	/* @import '@glidejs/glide/dist/css/glide.core.min.css'; */
+  .particle-wrapper {
+    will-change: opacity, transform;
+    opacity: 0.56405;
+    transform: translate3d(0px, 0px, 0px) scale3d(2.15393, 2.15393, 1)
+      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffff, #000000);
+    z-index: -1;
+  }
 
-	/* Custom CSS for the particle wrapper */
-	.particle-wrapper {
-			will-change: opacity, transform;
-			opacity: 0.56405;
-			transform: translate3d(0px, 0px, 0px) scale3d(2.15393, 2.15393, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-			transform-style: preserve-3d;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(to bottom, #ffffff, #000000);
-			z-index: -1;
-	}
+  .particle-wrapper div {
+    will-change: transform;
+    transform-style: preserve-3d;
+  }
 
-	.particle-wrapper div {
-			will-change: transform;
-			transform-style: preserve-3d;
-	}
+  .hero {
+    background-color: transparent;
+    /* Set the background to transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place the video behind other content */
+  }
 
-	/* Custom CSS for the hero section */
-	.hero {
-			background-color: transparent;
-			/* Set the background to transparent */
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			overflow: hidden;
-			position: relative;
-	}
-	#background-video {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			z-index: -1; /* Place the video behind other content */
-	}
+  /* Create a black opacity overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Adjust opacity here (0.5 = 50% opacity) */
+    z-index: 1; /* Place the overlay above the video */
+  }
 
-	/* Create a black opacity overlay */
-	.overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here (0.5 = 50% opacity) */
-			z-index: 1; /* Place the overlay above the video */
-	}
+  .gradient-text {
+    background: linear-gradient(to right, #000000, #757575);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+  }
 
-	.gradient-text {
-			background: linear-gradient(to right, #000000, #757575);
-			-webkit-background-clip: text;
-			background-clip: text;
-			color: transparent;
-			text-align: center;
-	}
-
-	.text-underline {
-			text-decoration: underline;
-	}
-	/* Apply Pirata One font to elements with a class of "pirata-font" */
-.pirata-font {
-	font-family: 'Pirata One', sans-serif;
-}
-		/* CSS for the video container */
-		#background-video {
-			position: fixed;
-			top: 0;
-			left: 0;
-			min-width: 100%;
-			min-height: 100%;
-			z-index: -1; /* Place it behind other content */
-		}
+  .text-underline {
+    text-decoration: underline;
+  }
+  /* Apply Pirata One font to elements with a class of "pirata-font" */
+  .pirata-font {
+    font-family: "Pirata One", sans-serif;
+  }
+  /* CSS for the video container */
+  #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Place it behind other content */
+  }
+  video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
 </style>

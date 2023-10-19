@@ -1,10 +1,15 @@
+---
+const { Base } = Astro.props;
+
+---
+
 <section class="bg-black-500 dark:bg-black-900">
   <div class="py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6 pirata-font">
     <!-- Row -->
     <h1 class="gradient-text text-6xl md:text-8xl tracking-tight font-extrabold pb-4 text-center pirata-font">Projects</h1>
 
     <div class="gap-8 items-center lg:grid lg:grid-cols-2 xl:gap-16">
-      <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+      <div class="text-black">
         <h2 class="mb-4 text-3xl md:text-4xl tracking-tight font-extrabold gradient-text">Mass Text Application</h2>
         <p class="mb-8 font-light text-lg lg:text-xl text-black">Seamless desktop application in Python with a Tkinter GUI, integrated Twilio API for efficient texting, and SQL Server for data storage, enabling quick service delivery without the intricacies of traditional ITSM solutions. Streamlined development, reduced manual effort, and facilitated easy installations. Sent and collected data for ~300,000 texts with %100 success rate.</p>
         <!-- List -->
@@ -33,7 +38,7 @@
     <!-- Row -->
     <div class="gap-8 items-center lg:grid lg:grid-cols-2 xl:gap-16">
       <img class="mb-4 w-full lg:mb-0 lg:flex rounded-lg" src="/public/Screenshot 2023-10-18 at 3.18.26 PM.png" alt="office feature image 2">
-      <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+      <div class="text-black">
         <h2 class="mb-4 text-3xl md:text-4xl tracking-tight font-extrabold gradient-text">Intranet</h2>
         <p class="mb-8 font-light text-lg lg:text-xl text-black">Constructed using a modern tech stack that includes Astro, Tailwind coupled with SCSS, React, and Next.js. The intranet offers seamless navigation and fast page loads through server-side rendering (SSR) powered by Node.js. It's fortified with Active Directory for organized data management, MS Azure 2-Factor authentication for enhanced security, and complies with the latest security parameters to ensure a safe user experience. Overall handling 500+ employees successfully.</p>
         <!-- List -->
@@ -79,4 +84,19 @@
     </div>
 
   </div>
-</section
+</section>
+<style>
+	.hero {
+			background-color: transparent;
+			/* Set the background to transparent */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			overflow: hidden;
+			position: relative;
+	}
+  .pirata-font {
+    font-family: "Pirata One", sans-serif;
+  }
+</style> 
