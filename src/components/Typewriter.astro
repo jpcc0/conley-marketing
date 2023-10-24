@@ -1,0 +1,67 @@
+<!-- src/components/Typewriter.astro -->
+<div class="lds-spinner"></div>
+<div id="loadingScreen" class="fixed top-0 left-0 w-screen h-screen bg-black z-50 flex items-center justify-center ">
+  <p class="text-white typewriter py-6 px-4 text-center gradient-text text-[10px] md:text-2xl font-light md:text-center ">For every action, there is an equal and opposite reaction.</p>
+</div>
+
+<style>
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+.typewriter-container {
+  overflow: hidden;      /* Ensures that the text doesn't overflow its container */
+  white-space: nowrap;   /* Prevents text from wrapping */
+  border-right: 2px solid black; /* Cursor effect */
+  max-width: 0;          /* Start with a width of 0 */
+  animation: typewriter 5s steps(40, end) forwards; /* Example for mobile */
+}
+.typewriter {
+  display: inline-block;  /* Ensure it's an inline block */
+  width: fit-content;    /* This makes the width only as wide as its content */
+  overflow: hidden;
+  border-right: 0.15em solid lime;  /* Blinking cursor in green */
+  white-space: nowrap;
+  color: lime;              /* Bright green text color */
+  font-family: 'Courier New', monospace;  /* Monospace font */
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: 
+    typewriter 8s steps(60, end) forwards, 
+    blink 0.75s step-end infinite 8s; /* The 8s at the end delays the start of the blink animation */
+}
+@media (min-width: 640px) { /* Example for Tailwind's `md` breakpoint */
+  .typewriter-container {
+    animation: typewriter 7s steps(40, end) forwards; /* Adjusted time for larger screens */
+  }
+}
+
+#loadingScreen {
+  transition: opacity 1s ease-in-out;  
+  opacity: 1;
+}
+
+#loadingScreen.hidden {
+  opacity: 0;
+}
+
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+      const loadingScreen = document.getElementById('loadingScreen');
+  
+      loadingScreen.classList.add('hidden');
+  
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 1000);  // After the fade-out transition completes
+  
+    }, 9000);  // Duration for the typewriter effect and delay
+  });
+</script>

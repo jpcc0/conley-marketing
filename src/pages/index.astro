@@ -1,18 +1,43 @@
 ---
-import Base from '../layouts/Base.astro';
-import Experience from '../components/Experience.astro';
-import Education from '../components/Education.astro'; 
-import Hero from '../components/Hero.astro';
-import Footer from '../components/Footer.astro';
-import Work from '../components/Work.astro';
+import Base from "../layouts/Base.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+import Work from "../components/Work.astro";
+import Typewriter from "../components/Typewriter.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <Base title="Joshua P. Conley">
-    <Hero />
-    <Experience />
-    <Work />
-    <Education />
-    <Footer />
+  <Typewriter class="typewriter-element" />
+  <Hero />
+  <Experience />
+  <Work />
+  <Education />
+  <Footer />
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const typewriterElement = document.querySelector(".typewriter-element");
+        typewriterElement.classList.add("fade-out");
+      }, 5000); // 5 seconds delay before starting the fade-out
+    });
+  </script>
+
+  <style>
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    .fade-out {
+      animation: fadeOut 2s forwards;
+    }
+  </style>
 </Base>
-
-

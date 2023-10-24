@@ -2,6 +2,7 @@
 interface Props {
   title: string;
 }
+import { ViewTransitions } from 'astro:transitions';
 
 ---
 
@@ -33,10 +34,9 @@ interface Props {
     <title>Joshua P. Conley</title>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
     ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Pixelify+Sans&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       type="text/css"
@@ -47,9 +47,11 @@ interface Props {
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<link rel="stylesheet" href="/global.css" />
+    <ViewTransitions />
 
   </head>
   <body>
+
 
     <slot />
   </body>
@@ -126,6 +128,10 @@ interface Props {
   /* Apply Pirata One font to elements with a class of "pirata-font" */
   .pirata-font {
     font-family: "Pirata One", sans-serif;
+    border-right: 0.15em solid lime;  /* Blinking cursor in green */
+  white-space: nowrap;
+  color: lime;              /* Bright green text color */
+  font-family: 'Courier New', monospace;  /* Monospace font */
   }
   /* CSS for the video container */
   #background-video {
