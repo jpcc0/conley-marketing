@@ -10,7 +10,7 @@ import { ViewTransitions } from "astro:transitions";
 ---
 
 <Base title="Joshua P. Conley">
-  <Typewriter class="typewriter-element" />
+  <!-- <Typewriter class="typewriter-element" /> -->
   <Hero />
   <Experience />
   <Work />
@@ -22,11 +22,18 @@ import { ViewTransitions } from "astro:transitions";
       setTimeout(function () {
         const typewriterElement = document.querySelector(".typewriter-element");
         typewriterElement.classList.add("fade-out");
-      }, 5000); // 5 seconds delay before starting the fade-out
+      }, 5000);
     });
   </script>
 
   <style>
+      .text-white {
+    background: linear-gradient(to right, #000000, #757575);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+  }
     @keyframes fadeOut {
       from {
         opacity: 1;
