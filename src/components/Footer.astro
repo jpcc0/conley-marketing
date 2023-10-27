@@ -1,46 +1,70 @@
+<footer class="text-secondary py-4">
+  <div class="container mx-auto flex items-center justify-center space-x-4">
+    <!-- LinkedIn Icon -->
+    <a
+      href="YOUR_LINKEDIN_PROFILE_URL"
+      class="text-secondary hover:text-blue-500"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <!-- Your LinkedIn SVG code -->
+      </svg>
+    </a>
 
-<body class="bg-gray-100">
-    <!-- Your page content goes here -->
-    <div class="content">
-        <!-- Add your content here -->
-    </div>
+    <!-- GitHub Icon -->
+    <a
+      href="YOUR_GITHUB_PROFILE_URL"
+      class="text-secondary stroke-white hover:text-green-400"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <!-- Your GitHub SVG code -->
+      </svg>
+    </a>
+  </div>
 
-    <!-- Footer -->
-    <footer class="text-secondary py-4">
-        <div class="container mx-auto flex items-center justify-center">
-            <!-- LinkedIn Icon -->
-            <a href="YOUR_LINKEDIN_PROFILE_URL" class="text-secondary hover:text-blue-500 mr-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <!-- Add your LinkedIn icon SVG code here -->
-                </svg>
-            </a>
-
-            <!-- GitHub Icon -->
-            <a href="YOUR_GITHUB_PROFILE_URL" class="text-secondary stroke-white hover:text-green-400">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <!-- Add your GitHub icon SVG code here -->
-                </svg>
-            </a>
-        </div>
-
-        <!-- Copyright Text -->
-        <div class="text-center mt-4 pirata-font underline decoration-lime-600">
-            &copy; 2023 Joshua P. Conley. All rights reserved.
-        </div>
-    </footer>
-</body>
+  <!-- Copyright Text -->
+  <div class="text-center mt-4 pirata-font underline decoration-lime-600">
+    &copy; 2023 Joshua P. Conley. All rights reserved.
+  </div>
+</footer>
 <style>
-	.hero {
-			background-color: transparent;
-			/* Set the background to transparent */
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			overflow: hidden;
-			position: relative;
-	}
+  .screen-content {
+    min-height: calc(100vh - (py-4 * 2)); /* Adjust for padding in nav */
+  }
+
+  .hero {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(
+      80% - (py-4 * 2)
+    ); /* Adjust for padding in text-secondary py-4 */
+    overflow: hidden;
+    position: relative;
+  }
+
   .pirata-font {
     font-family: "Pirata One", sans-serif;
   }
-</style> 
+  .nav-link {
+    text-decoration: none;
+    color: #f6f8e2; /* Your 'secondary' color */
+    transition: color 300ms ease;
+  }
+
+  .nav-link:hover {
+    color: #9ccd62; /* Your 'crazy' color */
+  }
+</style>
