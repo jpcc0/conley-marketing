@@ -766,7 +766,7 @@ video {
 .tracking-tight {
   letter-spacing: -0.025em;
 }
-.text-white {
+.text-secondary {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
@@ -778,7 +778,7 @@ video {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
-.text-white {
+.text-secondary {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
@@ -915,4 +915,56 @@ video {
   .xl\:gap-16 {
     gap: 4rem;
   }
+}
+  /* Base Color */
+  .bg-base {
+    background-color: #3C3D42;
+}
+
+.text-base {
+    color: #3C3D42;
+}
+
+.border-base {
+    border-color: #3C3D42;
+}
+
+/* Crazy Color */
+.bg-crazy {
+    background-color: #9CCD62;
+}
+
+.text-crazy {
+    color: #9CCD62;
+}
+
+.border-crazy {
+    border-color: #9CCD62;
+}
+
+/* Secondary Color */
+.bg-secondary {
+    background-color: #F6F8E2;
+}
+
+.text-secondary {
+    color: #F6F8E2;
+}
+
+.border-secondary {
+    border-color: #F6F8E2;
+}
+
+/* Turtle Color */
+/* Note: There's a typo in your provided color for turtle (#EODDCA). Assuming 'E0' is correct, I've corrected it below. */
+.bg-turtle {
+    background-color: #E0DDCA;
+}
+
+.text-turtle {
+    color: #E0DDCA;
+}
+
+.border-turtle {
+    border-color: #E0DDCA;
 }

@@ -7,11 +7,13 @@ import Footer from "../components/Footer.astro";
 import Work from "../components/Work.astro";
 import Typewriter from "../components/Typewriter.astro";
 import { ViewTransitions } from "astro:transitions";
+import Test from "../components/Test.astro";
 ---
 
 <Base title="Joshua P. Conley">
-  <Typewriter class="typewriter-element" />
+  <!-- <Typewriter class="typewriter-element" /> -->
   <Hero />
+  <!-- <Test /> -->
   <Experience />
   <Work />
   <Education />
@@ -27,13 +29,13 @@ import { ViewTransitions } from "astro:transitions";
   </script>
 
   <style>
-      .text-white {
+      /* .text-secondary {
     background: linear-gradient(to right, #000000, #757575);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-align: center;
-  }
+  } */
     @keyframes fadeOut {
       from {
         opacity: 1;

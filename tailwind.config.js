@@ -9,6 +9,12 @@ module.exports = {
       //   'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
       // }),
     },
+    backgroundColor: {
+      'base':'#3C3D42',
+      'crazy':'#9CCD62',
+      'secondary':'#F6F8E2',
+      'turtle':'#E0DDCA',
+    },
   variants: {
     extend: {},
   },

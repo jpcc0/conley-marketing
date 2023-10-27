@@ -1,0 +1,33 @@
+---
+import { Base } from 'Astro/props';
+---
+
+<section class="bg-black-500 dark:bg-black-900 py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6 pirata-font">
+    <h1 class="text-secondary text-6xl md:text-8xl tracking-tight font-extrabold pb-4 text-center pirata-font">Projects</h1>
+
+    <div x-data="{ slide: 0, slides: 2 }" class="relative max-w-screen-xl mx-auto">
+        <!-- Slides -->
+        <div x-show="slide === 0" class="flex gap-8 items-center">
+            <!-- Slide 1 content (Mass Text Application) -->
+            <article>
+                <!-- ... (similar to the previous structure) ... -->
+            </article>
+            <img class="mb-4 w-full lg:mb-0 lg:flex rounded-lg shadow-2xl hover:shadow-4xl transform hover:scale-105 transition-transform duration-300" src="/massText.png" alt="Mass Text Application Image">
+        </div>
+        <div x-show="slide === 1" class="flex gap-8 items-center">
+            <!-- Slide 2 content (Intranet) -->
+            <article>
+                <!-- ... (similar to the previous structure) ... -->
+            </article>
+            <img class="mb-4 w-full lg:mb-0 lg:flex rounded-lg shadow-2xl hover:shadow-4xl transform hover:scale-105 transition-transform duration-300" src="/intranet.png" alt="Intranet Image">
+        </div>
+
+        <!-- Navigation buttons -->
+        <button @click="slide = (slide === 0 ? slides : slide - 1)" class="absolute top-1/2 left-0 bg-white p-4 rounded-r-lg transform -translate-y-1/2">
+            &#10094; <!-- left arrow -->
+        </button>
+        <button @click="slide = (slide === slides ? 0 : slide + 1)" class="absolute top-1/2 right-0 bg-white p-4 rounded-l-lg transform -translate-y-1/2">
+            &#10095; <!-- right arrow -->
+        </button>
+    </div>
+</section>
