@@ -14,7 +14,7 @@
 
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents the default form submission action
+    event.preventDefault();
     
     const formData = {
         name: document.getElementById('name').value,
@@ -31,7 +31,7 @@
     })
     .then(response => response.json())
     .then(data => {
-        // Handle success message or actions here
+
         alert('Message sent successfully.');
     })
     .catch((error) => {
@@ -43,7 +43,7 @@
 </script>
 <style>
   .screen-content {
-    min-height: calc(100vh - (py-4 * 2)); /* Adjust for padding in nav */
+    min-height: calc(100vh - (py-4 * 2));
   }
 
   .hero {
@@ -53,7 +53,7 @@
     align-items: center;
     height: calc(
       80% - (py-4 * 2)
-    ); /* Adjust for padding in text-secondary py-4 */
+    ); 
     overflow: hidden;
     position: relative;
   }
@@ -63,11 +63,11 @@
   }
   .nav-link {
     text-decoration: none;
-    color: #f6f8e2; /* Your 'secondary' color */
+    color: #f6f8e2; 
     transition: color 300ms ease;
   }
 
   .nav-link:hover {
-    color: #9ccd62; /* Your 'crazy' color */
+    color: #9ccd62; 
   }
 </style>
