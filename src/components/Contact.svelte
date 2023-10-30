@@ -7,7 +7,7 @@
         <input type="text" id="name" name="name" placeholder="Name" class="w-full p-2 pirata-font text-base bg-white border border-gray-300 focus:border-lime-600 rounded transition duration-300">
           <input type="email" id="email" name="email" placeholder="Email" class="w-full p-2 pirata-font text-base bg-white border border-gray-300 focus:border-lime-600 rounded transition duration-300">
           <textarea id="message" name="message" placeholder="Message" rows="5" class="w-full p-2 pirata-font text-base bg-white border border-gray-300 focus:border-lime-600 rounded transition duration-300"></textarea>
-          <button type="submit" class="w-full py-2 px-4 pirata-font bg-lime-600 hover:bg-lime-700 text-secondary text-[18px] md:text-2xl font-light border decoration-lime-600 rounded transition duration-300 transform hover:scale-105">Send Message</button>
+          <button type="submit" id="submit" class="w-full py-2 px-4 pirata-font bg-lime-600 hover:bg-lime-700 text-secondary text-[18px] md:text-2xl font-light border decoration-lime-600 rounded transition duration-300 transform hover:scale-105">Send Message</button>
       </form>
   </div>
 </div>
