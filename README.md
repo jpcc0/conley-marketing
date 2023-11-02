@@ -1,5 +1,5 @@
 # Astro Starter Kit: Basics
-
+# By: Joshua P. Conley
 ```sh
 npm create astro@latest -- --template basics
 ```
