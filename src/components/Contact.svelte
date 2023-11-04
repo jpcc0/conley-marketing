@@ -43,7 +43,7 @@
     });
   });
 </script>
-
+ 
 <style>
   .screen-content {
     min-height: calc(100vh - (py-4 * 2));
