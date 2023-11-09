@@ -1,55 +1,64 @@
-# Astro Starter Kit: Basics
-# By: Joshua P. Conley
-# https://transcendent-custard-bbadc4.netlify.app/
-```sh
-npm create astro@latest -- --template basics
+# Joshua P. Conley's Portfolio
+
+This portfolio is a showcase of my work, crafted with Astro, and styled using Tailwind CSS with custom CSS enhancements. Typography is set using Google Fonts, and form interactions are powered by Svelte. Deployment and continuous integration are handled through Netlify.
+
+![Site Preview](public/site.png)
+
+Check out the live site here: [transcendent-custard-bbadc4.netlify.app](https://transcendent-custard-bbadc4.netlify.app/)
+
+## Quick Start
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/your-username/portfolio-repo.git
+cd portfolio-repo
+npm install
+To start the development server, run:
 ```
+```bash
+npm run dev
+```
+# 📂 Project Structure
+Here's the layout of the project:
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
+```bash
 /
 ├── public/
-│   └── favicon.svg
+│   └── assets/       # Static assets like images and fonts
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/   # Svelte components
+│   ├── styles/       # Custom styles and Tailwind CSS
+│   ├── pages/        # Astro pages (.astro files)
+│   └── utils/        # Utility and helper functions
+├── postcss.config.js # PostCSS configuration
+├── tailwind.config.js# Tailwind CSS configuration
+├── astro.config.mjs  # Astro configuration
+└── package.json      # Package manifest
 ```
+🚀 Deployment
+This site is deployed on Netlify, with automatic deploys from the main branch:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+```bash
+npm run build  # Build the production site
+npm run preview # Preview the built site locally
+```
+The netlify.toml file contains the necessary configurations for deployment.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+# 🧰 Technologies
+Astro: For building fast, modern websites.
+Tailwind CSS: For utility-first styling.
+Custom CSS: Additional styles for personal flair.
+Google Fonts: For beautiful, readable typefaces.
+Svelte: Reactive component framework for building efficient interfaces.
+Netlify: Hosting and automated deployments.
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# 🔗 Links & Resources
+Astro Documentation
+Tailwind CSS Documentation
+Google Fonts
+Svelte Documentation
+Netlify Documentation
+```bash
+Feel free to fork, star, or contribute to this repository if you find it useful. Happy coding!
+```

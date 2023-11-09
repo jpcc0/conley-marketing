@@ -1,7 +1,7 @@
 
 <div class="screen-content py-8 px-4">
   <div class="max-w-lg mx-auto">
-      <h2 class="text-secondary text-4xl font-extrabold pb-4 text-center pirata-font underline decoration-lime-600">
+      <h2 class="text-secondary text-5xl font-extrabold pb-4 text-center pirata-font underline decoration-lime-600">
           Contact Me
       </h2>
       <form id="contactForm" class="space-y-4" method="POST">
