@@ -1,5 +1,6 @@
 # Astro Starter Kit: Basics
 # By: Joshua P. Conley
+# https://transcendent-custard-bbadc4.netlify.app/
 ```sh
 npm create astro@latest -- --template basics
 ```
