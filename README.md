@@ -1,4 +1,4 @@
-# Joshua P. Conley's Portfolio
+# Joshua P. Conley - Portfolio
 
 This portfolio is a showcase of my work, crafted with Astro, and styled using Tailwind CSS with custom CSS enhancements. Typography is set using Google Fonts, and form interactions are powered by Svelte. Deployment and continuous integration are handled through Netlify.
 
