@@ -14,8 +14,9 @@ Clone the repository and install the dependencies:
 git clone https://github.com/your-username/portfolio-repo.git
 cd portfolio-repo
 npm install
-To start the development server, run:
 ```
+
+To start the development server, run:
 ```bash
 npm run dev
 ```
