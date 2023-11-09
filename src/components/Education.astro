@@ -1,7 +1,53 @@
+
+  <!-- Navigation -->
+  <nav class="w-full py-4">
+    <ul
+      class="flex justify-center space-x-4 p-4 text-[18px] md:text-2xl font-light pirata-font underline decoration-lime-600"
+    >
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/projects" class="nav-link">Projects</a></li>
+      <li><a href="/experience" class="nav-link">Experience</a></li>
+      <!-- <li><a href="/education" class="nav-link">Education</a></li> -->
+      <li><a href="/contact" class="nav-link">Contact</a></li>
+
+    </ul>
+  </nav>
+
+
+<style>
+  .screen-content {
+    min-height: calc(100vh - (py-4 * 2)); /* Adjust for padding in nav */
+  }
+
+  .hero {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(
+      80% - (py-4 * 2)
+    ); /* Adjust for padding in text-secondary py-4 */
+    overflow: hidden;
+    position: relative;
+  }
+
+  .pirata-font {
+    font-family: "Pirata One", sans-serif;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: #f6f8e2; /* Your 'secondary' color */
+    transition: color 300ms ease;
+  }
+
+  .nav-link:hover {
+    color: #9ccd62; /* Your 'crazy' color */
+  }
+</style>
 <section class="bg-black-500 dark:bg-black-900">
   <div class="py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6 pirata-font items-center">
-    <h1 class="text-secondary text-6xl md:text-8xl tracking-tight font-extrabold pb-4 text-center pirata-font">
-      <span class="text-crazy">[ </span>Education & Certifications<span class="text-crazy"> ]</span>
+    <h1 class="text-secondary text-5xl md:text-7xl tracking-tight font-extrabold pb-4 text-center pirata-font">
+      <span class="text-crazy">[ </span>Education<span class="text-crazy"> ]</span>
   </h1>
   
   <ol class="relative border-l border-lime-600 dark:border-lime-600 text-lg">
