@@ -4,15 +4,15 @@ This portfolio is a showcase of my work, crafted with Astro, and styled using Ta
 
 ![Site Preview](public/site.png)
 
-Check out the live site here: [transcendent-custard-bbadc4.netlify.app](https://transcendent-custard-bbadc4.netlify.app/)
+Check out the live site here: [joshuapconley.netlify.app](https://joshuapconley.netlify.app/)
 
 ## Quick Start
 
 Clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/your-username/portfolio-repo.git
-cd portfolio-repo
+git clone https://github.com/jpcc0/conley-marketing.git
+cd conley-marketing
 npm install
 ```
 
