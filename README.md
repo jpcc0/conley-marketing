@@ -33,7 +33,7 @@ Here's the layout of the project:
 │   ├── pages/        # Astro pages (.astro files)
 │   └── utils/        # Utility and helper functions
 ├── postcss.config.js # PostCSS configuration
-├── tailwind.config.js# Tailwind CSS configuration
+├── tailwind.config.js # Tailwind CSS configuration
 ├── astro.config.mjs  # Astro configuration
 └── package.json      # Package manifest
 ```
